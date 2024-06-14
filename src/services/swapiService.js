@@ -10,9 +10,9 @@ async function getAllStarships() {
       },
     })
     if(!res.ok) {
-      throw new Error ('err fetching all starships')
+      throw Error ('err fetching all starships')
     }
-    return res.json()
+    return await res.json()
   } catch (error) {
     console.log(error)
   }

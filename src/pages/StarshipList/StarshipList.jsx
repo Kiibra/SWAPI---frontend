@@ -14,9 +14,9 @@ const StarshipList = () => {
       setStarshipList(starshipData.results)
     }
     fetchStarshipList()
-  })
+  }, [])
 
-  // if(!starshipList.name) return <h1>Loading starships...</h1>
+  if(!starshipList.length) return <h1>Loading starships...</h1>
 
   return ( 
     <main>
