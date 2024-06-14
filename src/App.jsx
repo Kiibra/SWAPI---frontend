@@ -8,10 +8,12 @@ import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
+import StarshipList from './pages/StarshipList/StarshipList'
 
 // components
 import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
+
 
 // services
 import * as authService from './services/authService'
@@ -62,6 +64,9 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route 
+        path='/starships' 
+        element={<StarshipList />}/>
       </Routes>
     </>
   )
