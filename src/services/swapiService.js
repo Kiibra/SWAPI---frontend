@@ -1,23 +1,22 @@
-// services
-import * as tokenService from './tokenService'
+import * as tokenService from './tokenService' // Adjust the path as needed
 
-const baseUrl = `${import.meta.env.VITE_BACK_END_SERVER_URL}/api/starships`
-//Obtain all the starships from the API 
-async function getAllStarships(){
+const baseUrl = `${import.meta.env.VITE_BACK_END_SERVER_URL}/api`
+
+async function getAllStarships() {
   try {
-    const res = await fetch(`${baseUrl}`, {
-      headers: { 
-        'Authorization': `Bearer ${tokenService.getToken()}` 
+    const res = await fetch(`${baseUrl}/starships`, {
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
       },
     })
-    if(!res.okay) {
+    if(!res.ok) {
       throw new Error ('err fetching all starships')
     }
     return res.json()
   } catch (error) {
     console.log(error)
   }
-} 
+}
 
 export{
   getAllStarships, 

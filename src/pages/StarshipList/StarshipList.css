@@ -14,3 +14,54 @@
   width:28vh;
   color: rgb(191, 204, 10);
 }
+
+
+a {
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+h1 {
+  color: rgb(66, 79, 225);
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.card-list{
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    align-items: center;
+    margin: auto;
+    margin-top: 90px;
+}
+
+.item{
+  font-size: large;
+  background-color: rgb(70, 56, 39);
+  margin: 20px;
+  width: 29vh;
+}
+
+button{
+  border-radius: 12px;
+  padding: 8px;
+  background-color: #3a4df3;
+  color: aliceblue;
+  width: 126px;
+  margin-top: 80px;
+  margin-left: 20px;
+  cursor: pointer;
+  float: left;
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: #ec3a09;
+}
