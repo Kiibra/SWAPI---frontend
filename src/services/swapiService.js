@@ -18,6 +18,23 @@ async function getAllStarships() {
   }
 }
 
+async function getStarship(starshipId) {
+  try {
+    const res = await fetch(`${baseUrl}/starships/${starshipId}`, {
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+      },
+    })
+    if(!res.ok) {
+      throw Error ('err fetching a starships')
+    }
+    return await res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export{
   getAllStarships, 
+  getStarship,
 }
