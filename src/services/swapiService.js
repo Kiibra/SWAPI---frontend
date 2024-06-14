@@ -10,7 +10,7 @@ async function getAllStarships() {
       },
     })
     if(!res.ok) {
-      throw Error ('err fetching all starships')
+      throw new Error ('err fetching all starships')
     }
     return await res.json()
   } catch (error) {
@@ -25,11 +25,11 @@ async function getStarship(starshipId) {
         'Authorization': `Bearer ${tokenService.getToken()}`,
       },
     })
-    if(!res.ok) {
-      throw Error ('err fetching a starships')
+    if (!res.ok) {
+      throw new Error('Failed to fetch a starship')
     }
     return await res.json()
-  } catch (error) {
+  } catch(error) {
     console.log(error)
   }
 }
